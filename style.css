@@ -216,7 +216,7 @@
 .swiper {
     width: 100%;
     height: 500px;
-    /* z-index: -1 !important; */
+    z-index: 1 !important;
 }
 
 .swiper-slide {
@@ -325,3 +325,29 @@ footer {
 }
 
 /* animation ends */
+
+/* scroll up button starts */
+
+.go_up {
+    /* background: url("images/up_arrow.png") no-repeat scroll 0 0; */
+    background-color: #fcfcfc;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: scroll; */
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    padding-top: 2px;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    z-index: 200 !important;
+}
+
+.go_up:hover {
+    background-color: #277e71;
+}
+
+/* scroll up button ends */

@@ -187,4 +187,16 @@ $(document).ready(function () {
   elements.forEach((element) => {
     observer2.observe(element);
   });
+
+  // scroll to top
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+      $(".go_up").fadeIn();
+    } else {
+      $(".go_up").fadeOut();
+    }
+  });
+  $(".go_up").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+  });
 });
