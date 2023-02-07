@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg-image {
+    background-image: url("images/background.jpg");
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-opacity {
+    height: 500px;
+    width: 100%;
+    background-color: #191919;
+    opacity: 0.8;
+}
+
+/* .navbar {
+    z-index: 180 !important;
+}
+
+.navbar-expand-lg {
+    z-index: 180 !important;
+}
+
+.navbar-light {
+    z-index: 180 !important;
+} */
+
+.container-fluid {
+    z-index: 180 !important;
+}
+
+.navbar-toggler {
+    background-color: #fcfcfc !important;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: #fcfcfc !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.cover-title {
+    text-align: center;
+    padding-top: 9rem;
+    color: #fcfcfc;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.services-title, .growth-todo-title, .total-counts-title, .tiny-slider-title, .swiper-slider-title {
+    color: #277e71;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon {
+    color: #277e71;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid #277e71;
+}
+
+.logo-card {
+    text-align: center;
+}
+
+.card {
+    box-shadow: 3px 4px 5px #277e71;
+    height: 350px;
+    width: 100%;
+    padding: 15px;
+    z-index: -1;
+}
+
+.card-title {
+    text-align: center;
+    color: #277e71 !important;
+    font-size: 1.8rem;
+}
+
+.card-description {
+    text-align: justify;
+    color: gray;
+    padding: 12px;
+}
+
+.when-scrolled {
+    background-color: #277e71;
+    /* position: fixed;
+    top: 0; */
+    transition: 1s;
+    z-index: 99999 !important;
+}
+
+.growth-div {
+    z-index: -1;
+}
+
+.todo-input {
+    width: 80%;
+    padding: 10px;
+    background-color: #ebe5e4;
+    font-size: 1.2rem;
+}
+
+.todo-input:focus {
+    background-color: #fcfcfc;
+}
+
+.todo-button {
+    width: 20%;
+    padding: 10px;
+    background-color: #277e71;
+    font-size: 1.2rem;
+    color: #fcfcfc;
+    text-transform: uppercase;
+}
+
+.todo-button:hover {
+    opacity: 0.7;
+}
+
+.todo-ul li {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.fa-trash-can {
+    margin-left: 30px;
+    color: #ee7a7a;
+    cursor: pointer;
+}
+
+/* counter section starts here */
+
+.bg-count {
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('images/background_count.jpg');
+}
+
+.client-title {
+    color: #fcfcfc;
+    font-size: 2rem;
+}
+
+.client-div {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.counter, .counter2, .counter3 {
+    color: #fcfcfc;
+}
+
+@media screen and (max-width: 992px) {
+    .bg-count {
+        height: auto;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: cover; */
+        background-attachment: fixed;
+    }
+
+    .client-div {
+        margin-top: 3rem;
+    }
+
+    .client-div:last-child {
+        margin-bottom: 3rem;
+    }
+}
+
+/* counter section ends here */
+
+/* tiny slider starts here */
+
+.tiny-card {
+    text-align: center;
+}
+
+.tiny-pic {
+    height: 200px;
+    width: 200px;
+    z-index: -1 !important;
+}
+
+/* tiny slider ends here */
+
+/* swiper slider ends here */
+
+.swiper {
+    width: 100%;
+    height: 500px;
+    /* z-index: -1 !important; */
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-text {
+    position: absolute;
+    color: #efa514;
+    font-size: 3rem;
+    top: 45%;
+}
+
+.swiper-link {
+    position: absolute;
+    padding: 10px !important;
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    top: 55%;
+}
+
+.swiper-link:hover {
+    cursor: pointer;
+}
+
+.swiper-pic {
+    height: 90%;
+    width: 95%;
+}
+
+@media screen and (max-width: 1200px) {
+    .swiper-text {
+        font-size: 2.7rem;
+        top: 45%;
+    }
+
+    .swiper-link {
+        padding: 9px !important;
+        font-size: 1.6rem !important;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .swiper-text {
+        font-size: 2.5rem;
+        top: 43%;
+    }
+
+    .swiper-link {
+        padding: 7px !important;
+        font-size: 1.4rem !important;
+        top: 58%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .swiper-text {
+        font-size: 2rem;
+        top: 40%;
+    }
+
+    .swiper-link {
+        padding: 5px !important;
+        font-size: 1.2rem !important;
+        top: 57%;
+    }
+}
+
+/* swiper slider ends here */
+
+/* footer starts */
+
+footer {
+    background-color: #0a3a33;
+    height: auto;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* footer ends */
+
+/* animation starts */
+
+.is-animated {
+    opacity: 0;
+    transform: translateX(-35%);
+    transition: opacity 0.7s, transform 0.7s;
+    z-index: -1;
+}
+
+.is-animated.scrolled-into-view {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+/* animation ends */

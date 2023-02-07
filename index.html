@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Project of Fiz</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- font awesome js cdn -->
+    <script src="https://kit.fontawesome.com/fbbf77b9ce.js"></script>
+    <!-- typed js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <!-- canvas js cdn -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- counter up 2 js cdn -->
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <!-- tiny slider js cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <!-- swiper js cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- animate.css cdn -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+</head>
+
+<body>
+    <!-- background image section starts -->
+    <div class="bg-image">
+        <div class="bg-opacity">
+            <!-- navbar section starts here -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="images/logo.jpg" class="logo" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">More</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar section ends here -->
+            <div>
+                <h1 class="cover-title"></h1>
+            </div>
+        </div>
+    </div>
+    <!-- background image section ends -->
+    <!-- our service section starts -->
+    <h1 class="services-title">Our Services</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-2 is-animated">
+                <div class="card">
+                    <div class="logo-card">
+                        <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                    </div>
+                    <hr>
+                    <h1 class="card-title">Web Development</h1>
+                    <br>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                        pariatur ea commodi corporis
+                        ipsum obcaecati aliquam sed in totam maxime. Accusantium laboriosam distinctio qui? Voluptas
+                        dolores facere quam illum exercitationem.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-2 is-animated">
+                <div class="card">
+                    <div class="logo-card">
+                        <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                    </div>
+                    <hr>
+                    <h1 class="card-title">Web Development</h1>
+                    <br>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                        pariatur ea commodi corporis
+                        ipsum obcaecati aliquam sed in totam maxime. Accusantium laboriosam distinctio qui? Voluptas
+                        dolores facere quam illum exercitationem.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 is-animated">
+                <div class="card">
+                    <div class="logo-card">
+                        <i class="fa-solid fa-screwdriver-wrench icon"></i>
+                    </div>
+                    <hr>
+                    <h1 class="card-title">Web Development</h1>
+                    <br>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                        pariatur ea commodi corporis
+                        ipsum obcaecati aliquam sed in totam maxime. Accusantium laboriosam distinctio qui? Voluptas
+                        dolores facere quam illum exercitationem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our service section ends -->
+    <!-- growth rate and todo starts -->
+    <h1 class="growth-todo-title">Growth Rate and ToDo</h1>
+    <div class="row m-0 p-0">
+        <div class="col-lg-8 growth-div is-animated">
+            <h2 class="text-center">Growth Rate</h2>
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+        <div class="col-lg-4">
+            <h2 class="text-center">ToDo</h2>
+            <div class="d-flex justify-content-start">
+                <input type="text" name="todo" class="todo-input" placeholder="Enter todo">
+                <button class="todo-button" type="button">Add</button>
+            </div>
+            <div class="d-flex justify-content-start">
+                <ul class="todo-ul"></ul>
+            </div>
+        </div>
+    </div>
+    <!-- growth rate and todo ends -->
+    <!-- total count starts -->
+    <h1 class="total-counts-title">Total Counts</h1>
+    <div class="bg-count">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="client-div">
+                        <span class="client-title">Total Clients</span>
+                        <h1 class="counter">500</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="client-div">
+                        <span class="client-title">Total Projects</span>
+                        <h1 class="counter2">400</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="client-div">
+                        <span class="client-title">Total Achievements</span>
+                        <h1 class="counter3">200</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- total count ends -->
+    <!-- tiny slider starts -->
+    <h1 class="tiny-slider-title">Tiny Slider</h1>
+    <div class="tiny-slider">
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+        <div class="tiny-card">
+            <img src="images/person.png" class="tiny-pic" alt="person pic">
+            <h1>Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione
+                hic sint dolore repellat deleniti saepe nostrum officia voluptatem. Pariatur.</p>
+        </div>
+    </div>
+    <!-- tiny slider ends -->
+    <!-- swiper slider starts -->
+    <h1 class="swiper-slider-title">Swiper Slider</h1>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="swiper-card">
+                    <img src="images/swiper_background 1.jpg" class="swiper-pic" alt="person pic">
+                    <h1 class="swiper-text">Web Development</h1>
+                    <a href="#" class="btn btn-warning swiper-link">Visit Here</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-card">
+                    <img src="images/swiper_background 2.jpg" class="swiper-pic" alt="person pic">
+                    <h1 class="swiper-text">Web Development</h1>
+                    <a href="#" class="btn btn-warning swiper-link">Visit Here</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-card">
+                    <img src="images/swiper_background 3.jpg" class="swiper-pic" alt="person pic">
+                    <h1 class="swiper-text">Web Development</h1>
+                    <a href="#" class="btn btn-warning swiper-link">Visit Here</a>
+                </div>
+            </div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- swiper slider ends -->
+    <!-- footer starts -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12" style="padding-top: 70px">
+                    <h2 style="color: #fcfcfc; padding-bottom: 20px;">Footer Heading</h2>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12" style="padding-top: 70px">
+                    <h2 style="color: #fcfcfc; padding-bottom: 20px;">Footer Heading</h2>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                    <p style="color: #fcfcfc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+                        explicabo.</p>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12" style="padding-top: 70px">
+                    <h2 style="color: #fcfcfc; padding-bottom: 20px;">Location</h2>
+                    <p style="color: #fcfcfc">Uttara, Dhaka</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.4348859478428!2d90.39854131442006!3d23.87419288995402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c43bb53306c9%3A0x8f9e832d2805182b!2z4KaJ4Kak4KeN4Kak4Kaw4Ka-IOCmueCmvuCmieCmnCDgpqzgpr_gprLgp43gpqHgpr_gpoI!5e0!3m2!1sbn!2sbd!4v1675736793171!5m2!1sbn!2sbd"
+                        width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- popper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- bootstrap js cdn -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- custom js -->
+    <script src="index.js"></script>
+</body>
+
+</html>
