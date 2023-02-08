@@ -64,7 +64,7 @@
     position: relative;
 }
 
-.services-title, .growth-todo-title, .total-counts-title, .tiny-slider-title, .swiper-slider-title {
+.services-title, .growth-todo-title, .total-counts-title, .tiny-slider-title, .swiper-slider-title, .menu-title {
     color: #277e71;
     padding: 20px;
     text-align: center;
@@ -88,7 +88,7 @@
     height: 350px;
     width: 100%;
     padding: 15px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .card-title {
@@ -108,12 +108,14 @@
     /* position: fixed;
     top: 0; */
     transition: 1s;
-    z-index: 99999 !important;
+    z-index: 170 !important;
 }
 
 .growth-div {
-    z-index: -1;
+    z-index: 1;
 }
+
+/* todo starts */
 
 .todo-input {
     width: 80%;
@@ -149,6 +151,8 @@
     color: #ee7a7a;
     cursor: pointer;
 }
+
+/* todo ends */
 
 /* counter section starts here */
 
@@ -329,10 +333,7 @@ footer {
 /* scroll up button starts */
 
 .go_up {
-    /* background: url("images/up_arrow.png") no-repeat scroll 0 0; */
     background-color: #fcfcfc;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: scroll; */
     bottom: 20px;
     right: 20px;
     position: fixed;
@@ -351,3 +352,30 @@ footer {
 }
 
 /* scroll up button ends */
+
+/* jquery ui menu starts*/
+
+.ui_menu {
+    max-width: fit-content;
+    margin-left: 60px;
+}
+
+/* jquery ui menu ends*/
+
+/* jquery ui slider starts*/
+
+#slider {
+    width: 80%;
+}
+
+@media screen and (max-width:900px) {
+    .small-screen {
+        margin-top: 30px !important;
+    }
+}
+
+#range_slider {
+    width: 80%;
+}
+
+/* jquery ui slider ends*/

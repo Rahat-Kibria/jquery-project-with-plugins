@@ -199,4 +199,99 @@ $(document).ready(function () {
   $(".go_up").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 1000);
   });
+
+  // jquery ui dialog box
+  $("#dialog_box").dialog();
+
+  // tippy js
+  tippy(".swiper-slider-title", {
+    interactive: true,
+    animation: "fade",
+    arrow: true,
+    content:
+      '<strong>Bolded <span style="color: aqua;">content</span></strong>',
+    allowHTML: true,
+    delay: 500,
+    followCursor: true,
+  });
+  tippy(".tiny-slider-title", {
+    interactive: true,
+    animation: "fade",
+    arrow: true,
+    content:
+      '<strong>Bolded <span style="color: aqua;">content</span></strong>',
+    allowHTML: true,
+    delay: 500,
+    followCursor: true,
+  });
+  tippy(".total-counts-title", {
+    interactive: true,
+    animation: "fade",
+    arrow: true,
+    content:
+      '<strong>Bolded <span style="color: aqua;">content</span></strong>',
+    allowHTML: true,
+    delay: 500,
+    followCursor: true,
+  });
+  tippy(".growth-todo-title", {
+    interactive: true,
+    animation: "fade",
+    arrow: true,
+    content:
+      '<strong>Bolded <span style="color: aqua;">content</span></strong>',
+    allowHTML: true,
+    delay: 500,
+    followCursor: true,
+  });
+  tippy(".services-title", {
+    interactive: true,
+    animation: "fade",
+    arrow: true,
+    content:
+      '<strong>Bolded <span style="color: aqua;font-size:2rem;">content</span></strong>',
+    allowHTML: true,
+    delay: 500,
+    followCursor: true,
+  });
+
+  // jquery ui menu
+  $("#ui_menu").menu();
+
+  // jquery ui slider
+  $("#slider").slider({
+    value: 100,
+    min: 0,
+    max: 500,
+    step: 50,
+    slide: function (event, ui) {
+      $(".slider_amount").val("TK. " + ui.value);
+    },
+  });
+  $(".slider_amount").val("TK. " + $("#slider").slider("value"));
+
+  // jquery ui slider (range)
+  let getOutput = $("#show_amount");
+  let getSlider = $("#range_slider");
+  getSlider.slider({
+    range: true,
+    values: [20, 40],
+    min: 10,
+    max: 100,
+    slide: function (event, ui) {
+      getOutput.html(ui.values[0] + "-" + ui.values[1] + " Taka");
+    },
+    stop: function (event, ui) {
+      $("#min_amount").val(ui.values[0]);
+      $("#max_amount").val(ui.values[1]);
+    },
+  });
+  getOutput.html(
+    getSlider.slider("values", 0) +
+      "-" +
+      getSlider.slider("values", 1) +
+      " Taka"
+  );
+  $("#min_amount").val(getSlider.slider("values", 0));
+  $("#max_amount").val(getSlider.slider("values", 1));
 });
