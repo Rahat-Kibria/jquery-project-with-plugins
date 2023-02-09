@@ -294,4 +294,129 @@ $(document).ready(function () {
   );
   $("#min_amount").val(getSlider.slider("values", 0));
   $("#max_amount").val(getSlider.slider("values", 1));
+
+  // jquery ui slider (image control)
+  $("#height_slider, #width_slider").slider({
+    min: 100,
+    max: 500,
+    slide: control_img,
+  });
+  $("#opacity_slider").slider({
+    min: 0,
+    max: 100,
+    value: 100,
+    slide: control_img,
+  });
+  function control_img() {
+    let ctrl_height = $("#height_slider").slider("value");
+    let ctrl_width = $("#width_slider").slider("value");
+    let ctrl_opacity = $("#opacity_slider").slider("value");
+    $("#show_height_width").html(
+      "Height:" +
+        ctrl_height +
+        " px<br>" +
+        "Width:" +
+        ctrl_width +
+        " px<br>" +
+        "Opacity:" +
+        ctrl_opacity / 100
+    );
+    $("#resize_image").css({
+      height: ctrl_height,
+      width: ctrl_width,
+      opacity: ctrl_opacity / 100,
+    });
+  }
+
+  // jquery ui (animation)
+  let toggle_animation = true;
+  $("#animate_button").click(function () {
+    if (toggle_animation) {
+      $("#div_do_animation").animate({
+        height: "90%",
+        borderWidth: "4px",
+        borderStyle: "solid",
+        borderColor: "#191919",
+        backgroundColor: "#905d5d",
+        color: "#fcfcfc",
+      });
+    } else {
+      $("#div_do_animation").animate({
+        height: "40%",
+        borderWidth: "1px",
+        borderStyle: "solid",
+        borderColor: "#191919",
+        backgroundColor: "#277e71",
+        color: "#fcfcfc",
+      });
+    }
+    toggle_animation = !toggle_animation;
+  });
+
+  // jquery ui datepicker
+  $("#date").datepicker({
+    dateFormat: "dd/mm/yy",
+    changeMonth: true,
+    changeYear: true,
+    showOn: "both",
+    buttonText: "Show Date",
+    // numberOfMonths: 2,
+  });
+
+  // jquery ui tabs
+  $("#tabs").tabs();
+
+  // jquery ui autocomplete
+  let prog_subject = [
+    "PHP",
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Python",
+    "Laravel",
+    "MySQL",
+    "JQuery",
+    "Ruby",
+  ];
+  $("#autocomplete_input").autocomplete({
+    source: prog_subject,
+    autoFocus: true,
+    minLength: 2,
+    delay: 500,
+  });
+
+  // jquery ui autocomplete
+  $("#effect1").click(function () {
+    $(this).effect(
+      "shake",
+      {
+        time: 10,
+        distance: 50,
+      },
+      3000,
+      function () {
+        $(this).css("background-color", "#905d5d");
+      }
+    );
+  });
+  $("#effect2").click(function () {
+    $(this).effect({
+      effect: "explode",
+      easing: "easeInExpo",
+      pieces: 4,
+      duration: 3000,
+    });
+  });
+
+  // jquery ui accordion
+  $("#accordion").accordion({
+    collapsible: true,
+  });
+
+  // jquery ui accordion
+  $("#spinner").spinner({
+    min: -10,
+    max: 50,
+    step: 5,
+  });
 });
