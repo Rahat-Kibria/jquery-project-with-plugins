@@ -25,6 +25,8 @@ html, body {
     opacity: 0.8;
 }
 
+/* navbar starts */
+
 /* .navbar {
     z-index: 180 !important;
 }
@@ -59,6 +61,8 @@ html, body {
     margin-right: 20px;
 }
 
+/* navbar ends */
+
 .cover-title {
     text-align: center;
     padding-top: 9rem;
@@ -69,7 +73,7 @@ html, body {
     position: relative;
 }
 
-.services-title, .growth-todo-title, .total-counts-title, .tiny-slider-title, .swiper-slider-title, .menu-title, .image-control-title, .tabs-control-title, .accordion-title {
+.services-title, .growth-todo-title, .total-counts-title, .tiny-slider-title, .swiper-slider-title, .menu-title, .image-control-title, .tabs-control-title, .accordion-title, .droppable-title, .selectable-title {
     color: #277e71;
     padding: 20px;
     text-align: center;
@@ -113,7 +117,7 @@ html, body {
     /* position: fixed;
     top: 0; */
     transition: 1s;
-    z-index: 170 !important;
+    z-index: 9999999 !important;
 }
 
 .growth-div {
@@ -335,6 +339,14 @@ footer {
 
 /* animation ends */
 
+/* dialog starts */
+
+/* #dialog_box, .ui-dialog-content, .ui-widget-content {
+    z-index: 1;
+} */
+
+/* dialog ends */
+
 /* scroll up button starts */
 
 .go_up {
@@ -350,7 +362,7 @@ footer {
     text-align: center;
     cursor: pointer;
     display: none;
-    z-index: 200 !important;
+    z-index: 20 !important;
 }
 
 .go_up:hover {
@@ -375,6 +387,10 @@ footer {
     width: 80%;
     z-index: 1 !important;
 }
+
+/* .ui-slider, .ui-corner-all, .ui-slider-horizontal, .ui-widget, .ui-widget-content, .ui-slider-handle, .ui-corner-all, .ui-state-default {
+    z-index: 1 !important;
+} */
 
 @media screen and (max-width:900px) {
     .small-screen {
@@ -405,7 +421,7 @@ footer {
 
 /* jquery ui (animate) ends*/
 
-/* jquert ui effects starts */
+/* jquert ui effect starts */
 
 #effect1, #effect2 {
     width: 150px;
@@ -414,4 +430,123 @@ footer {
     color: #fcfcfc;
 }
 
-/* jquert ui effects ends */
+/* jquert ui effect ends */
+
+/* jquert ui draggable starts */
+
+#draggable_outer_div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #191919;
+}
+
+#draggable_inner_div {
+    height: 100px;
+    width: 100px;
+    background-color: #277e71;
+    color: #fcfcfc;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#draggable_div {
+    height: 50px;
+    width: 50px;
+    color: #fcfcfc;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#put_draggable_div_in_this_div {
+    margin-top: 10px;
+    height: 175px;
+    width: 175px;
+    border: 1px solid #191919;
+}
+
+/* jquert ui draggable ends */
+
+/* jquert ui droppable starts */
+
+#draggable_from, .droppable_to_1, .droppable_to_2 {
+    width: 250px;
+    background-color: #ebe5e4;
+    color: #191919;
+    border: 2px solid #191919;
+    display: inline-table;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#draggable_items li, #item1 li, #item2 li {
+    font-size: 20px;
+}
+
+.during_drag {
+    background-color: #ace1af;
+    border: 2px dashed #191919;
+}
+
+/* jquert ui droppable ends */
+
+/* jquert ui resizable starts */
+
+#resizable-div {
+    height: 150px;
+    width: 150px;
+    background-color: #277e71;
+    color: #fcfcfc;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* jquert ui resizable ends */
+
+/* jquert ui selectable starts */
+
+#selectable li {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #191919;
+    cursor: pointer;
+}
+
+.ui-selecting {
+    background-color: #ce5f38;
+    color: #fcfcfc;
+}
+
+.ui-selected {
+    background-color: #277e71;
+    color: #fcfcfc;
+}
+
+/* jquert ui selectable ends */
+
+/* jquert ui sortable starts */
+
+#sortable1, #sortable2 {
+    float: left;
+}
+
+#sortable1 li, #sortable2 li {
+    padding: 5px;
+    border: 1px solid #191919;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.placeholder {
+    background-color: #ce5f38 !important;
+    height: 40px;
+    width: 80px;
+}
+
+.ui-sortable-helper {
+    background-color: #ace1af;
+}
+
+/* jquert ui sortable ends */

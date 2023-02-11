@@ -419,4 +419,221 @@ $(document).ready(function () {
     max: 50,
     step: 5,
   });
+
+  // jquery ui draggable
+  $("#draggable_inner_div").draggable({
+    containment: "parent",
+    // containment: "#draggable_outer_div",
+    cursor: "move",
+    opacity: 0.7,
+    revert: true,
+    // axis: "x",
+    // axis: "y",
+  });
+  $("#draggable_div,#put_draggable_div_in_this_div").draggable({
+    snap: "#put_draggable_div_in_this_div",
+    cancel: "#put_draggable_div_in_this_div",
+    // snapTolerance: 50,
+    stack: "#draggable_div",
+    cursor: "move",
+  });
+  /* $("#draggable_div").mousedown(function () {
+    let max_z_index = 0;
+    $(this)
+      .siblings("#draggable_div")
+      .each(function () {
+        let current_z_index = Number($(this).css("z-index"));
+        max_z_index =
+          current_z_index > max_z_index ? current_z_index : max_z_index;
+      });
+    $(this).css("z-index", "max_z_index+1");
+  }); */
+
+  // jquery ui droppable
+  $("#draggable_items li").draggable({
+    // helper: "clone",
+    helper: function () {
+      return "<ul><strong>" + $(this).text() + "</ul></strong>";
+    },
+    revert: "invalid",
+  });
+  $(".droppable_to_1").droppable({
+    accept: "li[data-value='item1']",
+    activeClass: "during_drag",
+    // hoverClass: "during_drag",
+    /*activate: function (event, ui) {
+      $(this).addClass(".during_drag");
+    },*/
+    /*deactivate: function (event, ui) {
+      $(this).removeClass(".during_drag");
+    },*/
+    /*over: function (event, ui) {
+      $(this).addClass("during_drag");
+    },*/
+    /*out: function (event, ui) {
+      $(this).removeClass("during_drag");
+    },*/
+    drop: function (event, ui) {
+      $("#item1").append(ui.draggable);
+    },
+  });
+  $(".droppable_to_2").droppable({
+    accept: "li[data-value='item2']",
+    activeClass: "during_drag",
+    // hoverClass: "during_drag",
+    /*activate: function (event, ui) {
+      $(this).addClass(".during_drag");
+    },*/
+    /*deactivate: function (event, ui) {
+      $(this).removeClass(".during_drag");
+    },*/
+    /*over: function (event, ui) {
+      $(this).addClass("during_drag");
+    },*/
+    /*out: function (event, ui) {
+      $(this).removeClass("during_drag");
+    },*/
+    drop: function (event, ui) {
+      $("#item2").append(ui.draggable);
+    },
+  });
+
+  // jquery ui resizable
+  $("#resizable-div").resizable({
+    ghost: true,
+    minHeight: 100,
+    minWidth: 100,
+    maxHeight: 250,
+    maxWidth: 250,
+    start: function (event, ui) {
+      $("#start_dim").html(live_dim(event, ui));
+    },
+    resize: function (event, ui) {
+      $("#resize_dim").html(live_dim(event, ui));
+    },
+    stop: function (event, ui) {
+      $("#stop_dim").html(live_dim(event, ui));
+    },
+  });
+  function live_dim(event, ui) {
+    let dimension = "Height: " + ui.size.height + ", Width: " + ui.size.width;
+    return dimension;
+  }
+
+  // jquery ui resizable
+  $("#selectable").selectable({
+    stop: function () {
+      let selected_items = "";
+      $(".ui-selected").each(function () {
+        selected_items += $(this).text() + "<br>";
+      });
+      $("#show_selected").html(selected_items);
+    },
+  });
+
+  // jquery ui resizable
+  $("#sortable1").sortable({
+    placeholder: "placeholder",
+    // opacity: 0.5,
+    // axis: "y",
+    items: "li[data-value='sort_type_1']",
+    connectWith: "#sortable2",
+  });
+  $("#sortable2").sortable({
+    placeholder: "placeholder",
+    // opacity: 0.5,
+    // axis: "y",
+    items: "li[data-value='sort_type_2']",
+    connectWith: "#sortable1",
+  });
+
+  // form validation
+  $("#email_error_msg").hide();
+  $("#username_error_msg").hide();
+  $("#password_error_msg").hide();
+  $("#confirm_password_error_msg").hide();
+  let error_email = false;
+  let error_username = false;
+  let error_password = false;
+  let error_confirm_password = false;
+  $("#email").focusout(function () {
+    check_email();
+  });
+  $("#username").focusout(function () {
+    check_username();
+  });
+  $("#password").focusout(function () {
+    check_password();
+  });
+  $("#confirm_password").focusout(function () {
+    check_confirm_password();
+  });
+  function check_email() {
+    let pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (pattern.test($("#email").val())) {
+      $("#email_error_msg").hide();
+    } else if ($("#email").val() != "") {
+      $("#email_error_msg").html("*invalid email address");
+      $("#email_error_msg").show();
+      error_email = true;
+    }
+  }
+  function check_username() {
+    let username_length = $("#username").val().length;
+    if (
+      ($("#username").val() != "" && username_length < 5) ||
+      username_length > 15
+    ) {
+      $("#username_error_msg").html(
+        "*username should be between 5-15 characters"
+      );
+      $("#username_error_msg").show();
+      error_username = true;
+    } else {
+      $("#username_error_msg").hide();
+    }
+  }
+  function check_password() {
+    let password_length = $("#password").val().length;
+    if ($("#password").val() != "" && password_length < 8) {
+      $("#password_error_msg").html(
+        "*password should be at least 8 characters"
+      );
+      $("#password_error_msg").show();
+      error_password = true;
+    } else {
+      $("#password_error_msg").hide();
+    }
+  }
+  function check_confirm_password() {
+    let password_val = $("#password").val();
+    let confirm_password_val = $("#confirm_password").val();
+    if (
+      $("#confirm_password").val() != "" &&
+      password_val != confirm_password_val
+    ) {
+      $("#confirm_password_error_msg").html("*password did not match");
+      $("#confirm_password_error_msg").show();
+      error_confirm_password = true;
+    } else {
+      $("#confirm_password_error_msg").hide();
+    }
+  }
+  $("#validation_form").submit(function () {
+    let error_email = false;
+    let error_username = false;
+    let error_password = false;
+    let error_confirm_password = false;
+
+    if (
+      error_email == false &&
+      error_username == false &&
+      error_password == false &&
+      error_confirm_password == false
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 });

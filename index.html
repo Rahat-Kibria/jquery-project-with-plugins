@@ -29,17 +29,7 @@
     <!-- animate.css cdn -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <!--************* jquery ui css and js *********** -->
-    <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/swanky-purse/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/sunny/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/le-frog/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/pepper-grinder/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/humanity/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/excite-bike/jquery-ui.min.css"> -->
+    <!-- https://jqueryui.com/themeroller/ -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/cupertino/jquery-ui.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
@@ -404,7 +394,7 @@
         </div>
         <!-- jquert ui effect ends -->
     </div>
-    <h1 class="accordion-title">Jquery UI Accordion, Spinner</h1>
+    <h1 class="accordion-title">Jquery UI Accordion, Spinner, Draggable</h1>
     <div class="row">
         <!-- jquert ui accordian starts -->
         <div class="col-lg-4 col-md-12 col-sm-12">
@@ -430,10 +420,142 @@
         </div>
         <!-- jquert ui accordian ends -->
         <!-- jquert ui spinner starts -->
-        <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="col-lg-4 col-md-12 col-sm-12 small-screen">
             <input type="text" id="spinner">
+            <!-- jquert ui spinner ends -->
+            <!-- jquert ui draggable starts -->
+            <div id="draggable_outer_div" class="mt-2">
+                <div id="draggable_inner_div">draggable div</div>
+            </div>
         </div>
-        <!-- jquert ui spinner ends -->
+        <div class="col-lg-4 col-md-12 col-sm-12 small-screen">
+            <div id="draggable_div" style="background-color: #277e71;">draggable div 1</div>
+            <div id="draggable_div" style="background-color: #ee7a7a;">draggable div 2</div>
+            <div id="draggable_div" style="background-color: #efa514;">draggable div 3</div>
+            <div id="draggable_div" style="background-color: #007791;">draggable div 4</div>
+
+            <div id="put_draggable_div_in_this_div"></div>
+        </div>
+        <!-- jquert ui draggable starts -->
+    </div>
+    <h1 class="droppable-title">Jquery UI Droppable, Resizable</h1>
+    <div class="row">
+        <!-- jquert ui droppable starts -->
+        <div class="col-lg-7 col-md-12 col-sm-12">
+            <div id="draggable_from">
+                <ul id="draggable_items">
+                    <li data-value="item1">item 1 of 1</li>
+                    <li data-value="item1">item 2 of 1</li>
+                    <li data-value="item1">item 3 of 1</li>
+
+                    <li data-value="item2">item 1 of 2</li>
+                    <li data-value="item2">item 2 of 2</li>
+                    <li data-value="item2">item 3 of 2</li>
+                </ul>
+            </div>
+            <div class="droppable_to_1">
+                Item 1 Title
+                <ul id="item1"></ul>
+            </div>
+            <div class="droppable_to_2">
+                Item 2 Title
+                <ul id="item2"></ul>
+            </div>
+        </div>
+        <!-- jquert ui droppable ends -->
+        <!-- jquert ui resizable starts -->
+        <div class="col-lg-5 col-md-12 col-sm-12 small-screen">
+            <table>
+                <tr>
+                    <td style="font-weight: bold;">Start:</td>
+                    <td>
+                        <div id="start_dim"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Resize:</td>
+                    <td>
+                        <div id="resize_dim"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Stop:</td>
+                    <td>
+                        <div id="stop_dim"></div>
+                    </td>
+                </tr>
+            </table>
+            <div id="resizable-div">Resize me from the edges</div>
+        </div>
+        <!-- jquert ui resizable ends -->
+    </div>
+    <h1 class="selectable-title">Jquery UI Selectable, Sortable, Validation</h1>
+    <div class="row">
+        <!-- jquert ui selectable starts -->
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <ul id="selectable">
+                <li>php</li>
+                <li>python</li>
+                <li>javascript</li>
+                <li>jquery</li>
+                <li>vue</li>
+                <li>react</li>
+            </ul>
+            <div style="margin: 20px">
+                <h4>You Selected:</h4>
+                <div id="show_selected"></div>
+            </div>
+        </div>
+        <!-- jquert ui selectable ends -->
+        <!-- jquert ui sortable starts -->
+        <div class="col-lg-4 col-md-12 col-sm-12 small-screen">
+            <ul id="sortable1">
+                <li data-value="sort_type_1">php</li>
+                <li data-value="sort_type_1">python</li>
+                <li data-value="sort_type_1">javascript</li>
+                <li data-value="sort_type_1">jquery</li>
+                <li data-value="sort_type">vue</li>
+                <li data-value="sort_type">react</li>
+            </ul>
+            <ul id="sortable2">
+                <li data-value="sort_type_2">php 2</li>
+                <li data-value="sort_type_2">python 2</li>
+                <li data-value="sort_type_2">javascript 2</li>
+                <li data-value="sort_type">jquery 2</li>
+                <li data-value="sort_type">vue 2</li>
+                <li data-value="sort_type_2">react 2</li>
+            </ul>
+        </div>
+        <!-- jquert ui sortable ends -->
+        <!-- form vadidation starts -->
+        <div class="col-lg-4 col-md-12 col-sm-12 small-screen">
+            <form action="message.html" id="validation_form">
+                <div style="margin-bottom: 5px;">
+                    <label for="emails">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <p><small id="email_error_msg" style="color: #ce5f38"></small></p>
+                </div>
+                <div style="margin-bottom: 5px;">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                    <p><small id="username_error_msg" style="color: #ce5f38"></small></p>
+                </div>
+                <div style="margin-bottom: 5px;">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <p><small id="password_error_msg" style="color: #ce5f38"></small></p>
+                </div>
+                <div style="margin-bottom: 5px;">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" name="confirm_password" id="confirm_password">
+                    <p><small id="confirm_password_error_msg" style="color: #ce5f38"></small></p>
+                </div>
+                <div style="margin-bottom: 5px;">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <!-- form validation ends -->
     </div>
     <!-- footer starts -->
     <footer>
