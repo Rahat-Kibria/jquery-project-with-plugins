@@ -1,7 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0px;
     padding: 0px;
 }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+} */
 
 html, body {
     overflow-x: hidden;
@@ -40,7 +58,7 @@ html, body {
 } */
 
 .container-fluid {
-    z-index: 180 !important;
+    z-index: 99999 !important;
 }
 
 .navbar-toggler {
@@ -341,8 +359,8 @@ footer {
 
 /* dialog starts */
 
-/* #dialog_box, .ui-dialog-content, .ui-widget-content {
-    z-index: 1;
+/* #dialog_box {
+    z-index: 1 !important;
 } */
 
 /* dialog ends */
